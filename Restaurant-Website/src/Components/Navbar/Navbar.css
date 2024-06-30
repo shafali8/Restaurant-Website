@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.app__navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-black);
+    color: whitesmoke;
+    padding: 1rem 2rem;
+}
+.app__navbar-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-golden);
+}
+.app__navbar img{
+    width: 150px;
+}
+.app__navbar-links{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.app__navbar-links li {
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+.app__navbar-links li a {
+    font-size: 21px;
+    color: var(--color-golden);
+}
+.app__navbar-links li:hover {
+    transform: scale(1.2);
+}
+.app__navbar-login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.app__navbar-login a {
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+.app__navbar-login a:hover{
+    border-bottom: 1px solid var(--color-golden);
+}
+.app__navbar-login div{
+    width: 1px;
+    height: 30px;
+    background-color: var(--color-grey);
+}
+.app__navbar-smallscreen img{
+    width: 45px;
+}
+.app__navbar-smallscreen{
+    display: none;
+}
+.app__navbar-smallscreen_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 86%);
+    flex-direction: column;
+    z-index: 5;
+}
+.app__navbar-smallscreen_overlay .overlay__close{
+   font-size: 50px;
+   color: var(--color-golden);
+   cursor: pointer;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+}
+.app__navbar-smallscreen-links{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+.app__navbar-smallscreen-links li{
+  list-style: none;
+  padding: 0 1rem;
+  color: var(--color-golden);
+  font-size: 2.5rem;
+  line-height: 1.5;
+   text-align: center;
+   font-family: var(--font-base);
+}
+.app__navbar-smallscreen-links li:hover{
+    color: var(--color-white);
+    transform: scale(1.01);
+}
+@media screen and (max-width: 2000px) {
+    .app__navbar-logo{
+        width: 210px;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .app__navbar-links{
+        display: none;
+    }
+    .app__navbar-smallscreen{
+        display: flex;
+    }
+   
+}
+@media screen and (max-width: 650px) {
+    .app__navbar-logo{
+        width: 110px;
+    }
+    .app__navbar{
+        padding: 1rem;
+    }
+    .app__navbar-login{
+        display: none;
+    }
+}
